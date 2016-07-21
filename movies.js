@@ -22,4 +22,19 @@ getAllMovies = function(){
     return movies;
 }
 
+getMovieById = function(id){
+    return movies[id];
+}
+
+getActorsById = function(id){
+    return movies[id]['actors'];
+}
+
+getQuotesById = function(id){
+    return movies[id]['quotes'];
+}
+
 exports.getAllMovies = getAllMovies;
+exports.getMovieById = getMovieById;
+exports.getActorsById = getActorsById;
+exports.getQuotesById = getQuotesById;
