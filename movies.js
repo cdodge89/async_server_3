@@ -23,15 +23,27 @@ getAllMovies = function(){
 }
 
 getMovieById = function(id){
-    return movies[id];
+    if(movies.hasOwnProperty(id)){
+        return movies[id];
+    } else {
+        return {error:404, message:"MOVIE NOT FOUND"};
+    }
 }
 
 getActorsById = function(id){
-    return movies[id]['actors'];
+    if(movies.hasOwnProperty(id)){
+        return movies[id]['actors'];
+    } else {
+        return {error:404, message:"MOVIE NOT FOUND"};
+    }
 }
 
 getQuotesById = function(id){
-    return movies[id]['quotes'];
+    if(movies.hasOwnProperty(id)){
+        return movies[id]['quotes'];
+    } else {
+        return {error:404, message:"MOVIE NOT FOUND"};
+    }
 }
 
 exports.getAllMovies = getAllMovies;

@@ -27,5 +27,9 @@ app.get('/movies/:id/quotes',function(req,res){
     res.end(JSON.stringify(movies.getQuotesById(id)));
 });
 
+app.get('/*',function(req,res){
+    res.end("PAGE NOT FOUND");
+});
+
 app.listen(port);
 console.log('listening at port ' + port);
